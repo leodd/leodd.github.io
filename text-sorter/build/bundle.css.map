@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\..\\App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\tlet text = '';\n\tlet prompt = 'Click me';\n\n\tfunction sort_text() {\n\t\tlet text_list = text.split(/[\\n\\r\\t]+/);\n\t\ttext_list.sort();\n\t\ttext = text_list.join('\\n');\n\n\t\tprompt = 'Ouch!!';\n\n\t\tsetTimeout(() => {\n\t\t\tprompt = 'Click me';\n\t\t}, 1000)\n\t}\n</script>\n\n<main>\n\t<h3>Paste text into the underneath box and <button on:click={ sort_text }>{ prompt }</button></h3>\n\t\n\t<textarea cols=\"100\" rows=\"20\" bind:value={ text } placeholder=\"paste here\"></textarea>\n</main>\n\n<style>\n\tmain {\n\t\ttext-align: center;\n\t\tpadding: 1em;\n\t\tmax-width: 240px;\n\t\tmargin: 0 auto;\n\t}\n\n\th3 {\n\t\tcolor: #ff3e00;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 1.5em;\n\t\tfont-weight: 100;\n\t}\n\n\t@media (min-width: 640px) {\n\t\tmain {\n\t\t\tmax-width: none;\n\t\t}\n\t}\n</style>"
+  ],
+  "names": [],
+  "mappings": "AAwBC,IAAI,cAAC,CAAC,AACL,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AACf,CAAC,AAED,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,GAAG,AACjB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AAC1B,IAAI,cAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAChB,CAAC,AACF,CAAC"
+}
